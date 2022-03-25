@@ -1,0 +1,311 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: VRChat_07_Artemis_Crystal
+  m_Shader: {fileID: 4800000, guid: e8e7d781c3155254b9ea8956c5bd1218, type: 3}
+  m_ShaderKeywords: _ _ALPHAPREMULTIPLY_ON _EMISSION _EMISSIVE_SIMPLE _INVERSE_Z_AXIS_BLD_ON
+    _IS_BLENDADDTOHICOLOR_ON _IS_BLENDADDTOMATCAP_ON _IS_FILTER_HICUTPOINTLIGHTCOLOR_ON
+    _IS_LIGHTCOLOR_1ST_SHADE_ON _IS_LIGHTCOLOR_2ND_SHADE_ON _IS_LIGHTCOLOR_AP_RIMLIGHT_ON
+    _IS_LIGHTCOLOR_BASE_ON _IS_LIGHTCOLOR_HIGHCOLOR_ON _IS_LIGHTCOLOR_MATCAP_ON _IS_LIGHTCOLOR_RIMLIGHT_ON
+    _IS_SPECULARTOHIGHCOLOR_ON _NORMALMAP _OUTLINE_NML _SET_SYSTEMSHADOWSTOBASE_ON
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _1st_ShadeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _2nd_ShadeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BakedNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: ce3bcac0b9b902e49a5d0f5a7506f988, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ClippingMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emissive_Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HighColor_Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCap_Sampler:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTexture:
+        m_Texture: {fileID: 2800000, guid: 78281eaf33bd330429580057821d1a0c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMapForMatCap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: a2e36a7b8dc3d3142a9ebcd1999d9111, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OutlineTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Outline_Sampler:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Set_1st_ShadePosition:
+        m_Texture: {fileID: 2800000, guid: a2e36a7b8dc3d3142a9ebcd1999d9111, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Set_2nd_ShadePosition:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Set_HighColorMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Set_MatcapMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Set_RimLightMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadingGradeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopTexture0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _1st2nd_Shades_Feather: 0.123
+    - _1st_ShadeColor_Feather: 0.341
+    - _1st_ShadeColor_Step: 0.313
+    - _2nd_ShadeColor_Feather: 0.123
+    - _2nd_ShadeColor_Step: 0.215
+    - _Add_Antipodean_RimLight: 0
+    - _Ap_RimLight_FeatherOff: 0
+    - _Ap_RimLight_Power: 0.1
+    - _BaseColor_Step: 0.313
+    - _BaseShade_Feather: 0.341
+    - _Base_Speed: 0
+    - _BlurLevelMatcap: 0
+    - _BlurLevelSGM: 0
+    - _BumpScale: 0
+    - _BumpScaleMatcap: 1
+    - _CameraRolling_Stabilizer: 0
+    - _Clipping_Level: 0.5
+    - _ColorBoost: 1
+    - _ColorShift_Speed: 0
+    - _Cull: 0
+    - _CullMode: 0
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 10
+    - _EMISSIVE: 0
+    - _EmissiveBlink_Max: 3
+    - _EmissiveBlink_Min: 1
+    - _EmissiveBlink_Velocity: 4
+    - _EmissiveScroll_Interval: 20
+    - _EmissiveScroll_Velocity: 10
+    - _EmissiveScroll_Width: 10
+    - _Farthest_Distance: 100
+    - _FlashPower: 0.102
+    - _FlashSpeed: 10
+    - _Float2: 0.68
+    - _GI_Intensity: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 1
+    - _GlossyReflections: 1
+    - _Gradient: 0.1
+    - _Height: 0
+    - _HighColor_Power: 0.497
+    - _Inverse_Clipping: 1
+    - _Inverse_MatcapMask: 0
+    - _Inverse_Z_Axis_BLD: 1
+    - _IsBaseMapAlphaAsClippingMask: 1
+    - _Is_BLD: 0
+    - _Is_BakedNormal: 0
+    - _Is_BlendAddToHiColor: 1
+    - _Is_BlendAddToMatCap: 1
+    - _Is_BlendBaseColor: 0
+    - _Is_ColorShift: 0
+    - _Is_Filter_HiCutPointLightColor: 1
+    - _Is_Filter_LightColor: 0
+    - _Is_LightColor_1st_Shade: 1
+    - _Is_LightColor_2nd_Shade: 1
+    - _Is_LightColor_Ap_RimLight: 1
+    - _Is_LightColor_Base: 1
+    - _Is_LightColor_HighColor: 1
+    - _Is_LightColor_MatCap: 1
+    - _Is_LightColor_Outline: 1
+    - _Is_LightColor_RimLight: 1
+    - _Is_NormalMapForMatCap: 0
+    - _Is_NormalMapToBase: 1
+    - _Is_NormalMapToHighColor: 1
+    - _Is_NormalMapToRimLight: 0
+    - _Is_Ortho: 0
+    - _Is_OutlineTex: 0
+    - _Is_PingPong_Base: 0
+    - _Is_SpecularToHighColor: 0
+    - _Is_UseTweakHighColorOnShadow: 0
+    - _Is_UseTweakMatCapOnShadow: 0
+    - _Is_ViewCoord_Scroll: 0
+    - _Is_ViewShift: 0
+    - _LightDirection_MaskOn: 0
+    - _MatCap: 0
+    - _Metallic: 0.714
+    - _Mode: 3
+    - _Nearest_Distance: 0.5
+    - _NoiseContrast: -0.87
+    - _NoiseRotateSpeed: -0.849
+    - _NoiseScrollSpeed: -0.753
+    - _OUTLINE: 0
+    - _OcclusionStrength: 0.5
+    - _OffsetInside: 0.001
+    - _OffsetOutside: 0.001
+    - _Offset_X_Axis_BLD: -0.05
+    - _Offset_Y_Axis_BLD: 0.09
+    - _Offset_Z: 0
+    - _OutlineMode: 0
+    - _Outline_Width: 0
+    - _Parallax: 0.02
+    - _RimLight: 0
+    - _RimLight_FeatherOff: 0
+    - _RimLight_InsideMask: 0.0001
+    - _RimLight_Power: 0.448
+    - _RimPower: 3
+    - _Rotate_EmissiveUV: 0
+    - _Rotate_MatCapUV: 0
+    - _Rotate_NormalMapForMatCapUV: 0
+    - _Scroll_EmissiveU: 0
+    - _Scroll_EmissiveV: 0
+    - _Set_SystemShadowsToBase: 1
+    - _ShadeColor_Step: 0.215
+    - _Shadow: 0.4
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _StepOffset: 0
+    - _TopTile: 1
+    - _Transparency: 0
+    - _TweakHighColorOnShadow: 0
+    - _TweakMatCapOnShadow: 0
+    - _Tweak_HighColorMaskLevel: 0
+    - _Tweak_LightDirection_MaskLevel: 0
+    - _Tweak_MatCapUV: 0
+    - _Tweak_MatcapMaskLevel: 0
+    - _Tweak_RimLightMaskLevel: 0
+    - _Tweak_ShadingGradeMapLevel: 0
+    - _Tweak_SystemShadowsLevel: 0
+    - _Tweak_transparency: 0.329
+    - _UVSec: 0
+    - _Unlit_Intensity: 1
+    - _Use_1stAs2nd: 0
+    - _Use_BaseAs1st: 0
+    - _ZWrite: 0
+    - __dirty: 1
+    - _outline_tint: 0.5
+    - _outline_width: 0.2
+    - _simpleUI: 0
+    - _utsTechnique: 0
+    - _utsVersion: 2.075
+    m_Colors:
+    - _1st_ShadeColor: {r: 0, g: 0.8243408, b: 0.9411765, a: 1}
+    - _2nd_ShadeColor: {r: 0.75, g: 0.50735295, b: 0.50735295, a: 1}
+    - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.42647058, g: 0.57281935, b: 1, a: 1}
+    - _Color: {r: 0.42647055, g: 0.5728193, b: 1, a: 1}
+    - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
+    - _Emis: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 0.17484862, g: 0.46901917, b: 0.5661765, a: 0}
+    - _EmissiveScroll_Direction: {r: 0, g: -10, b: 0, a: 0}
+    - _Emissive_Color: {r: 0.61878246, g: 0.8014706, b: 0.77879214, a: 1}
+    - _HighColor: {r: 0.9191176, g: 0.9191176, b: 0.9191176, a: 1}
+    - _InsideColor: {r: 0.43749994, g: 0.512931, b: 0.875, a: 1}
+    - _InsideColorFlash: {r: 0.5193205, g: 0.97794116, b: 0, a: 1}
+    - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Outline_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _OutsideColor: {r: 0.86764705, g: 0.21691176, b: 0.21691176, a: 1}
+    - _OutsideColorFlash: {r: 0.32758608, g: 0.13970588, b: 0.5588235, a: 1}
+    - _RimLightColor: {r: 0.8103446, g: 0.375, b: 1, a: 1}
+    - _VertObjectPosition: {r: 0, g: 0, b: 0, a: 1}
+    - _VertObjectRotation: {r: 0, g: 0, b: 0, a: 1}
+    - _VertObjectScale: {r: 1, g: 1, b: 1, a: 1}
+    - _VertWorldPosDiff: {r: 0, g: 0, b: 0, a: 1}
+    - _ViewShift: {r: 0, g: 0, b: 0, a: 1}
+    - _outline_color: {r: 0.5, g: 0.5, b: 0.5, a: 1}

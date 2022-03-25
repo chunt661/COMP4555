@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: a374ff496c317fb45b1792956b641229
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Armature.001
+    100004: Bone0
+    100006: Bone01
+    100008: Bone01_end
+    100010: Bone01_end_end
+    100012: Bone01_end_end_end
+    100014: Bone0_end
+    100016: Bone0_end_end
+    100018: Bone0_end_end_end
+    100020: Jiggle_Bone_1
+    100022: Jiggle_Bone_11
+    100024: Jiggle_Bone_2
+    100026: Jiggle_Bone_21
+    100028: Jiggle_Bone_3
+    100030: Jiggle_Bone_31
+    100032: Jiggle_Bone_4
+    100034: Jiggle_Bone_41
+    100036: Jiggle_Bone_5
+    100038: Jiggle_Bone_51
+    100040: Jiggle_Bone_51_end
+    100042: Jiggle_Bone_51_end_end
+    100044: Jiggle_Bone_51_end_end_end
+    100046: Jiggle_Bone_5_end
+    100048: Jiggle_Bone_5_end_end
+    100050: Jiggle_Bone_5_end_end_end
+    100052: Jiggle_Bone_Root_0
+    100054: Jiggle_Bone_Root_01
+    100056: Wing2.000
+    100058: Wing2.001
+    400000: //RootNode
+    400002: Armature.001
+    400004: Bone0
+    400006: Bone01
+    400008: Bone01_end
+    400010: Bone01_end_end
+    400012: Bone01_end_end_end
+    400014: Bone0_end
+    400016: Bone0_end_end
+    400018: Bone0_end_end_end
+    400020: Jiggle_Bone_1
+    400022: Jiggle_Bone_11
+    400024: Jiggle_Bone_2
+    400026: Jiggle_Bone_21
+    400028: Jiggle_Bone_3
+    400030: Jiggle_Bone_31
+    400032: Jiggle_Bone_4
+    400034: Jiggle_Bone_41
+    400036: Jiggle_Bone_5
+    400038: Jiggle_Bone_51
+    400040: Jiggle_Bone_51_end
+    400042: Jiggle_Bone_51_end_end
+    400044: Jiggle_Bone_51_end_end_end
+    400046: Jiggle_Bone_5_end
+    400048: Jiggle_Bone_5_end_end
+    400050: Jiggle_Bone_5_end_end_end
+    400052: Jiggle_Bone_Root_0
+    400054: Jiggle_Bone_Root_01
+    400056: Wing2.000
+    400058: Wing2.001
+    2100000: Weird thing on back2.001
+    2100002: Weird thing on back2
+    2100004: Weird thing on back.001
+    2100006: Weird thing on back
+    4300000: Wing2.000
+    4300002: Wing2.001
+    9500000: //RootNode
+    13700000: Wing2.000
+    13700002: Wing2.001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
