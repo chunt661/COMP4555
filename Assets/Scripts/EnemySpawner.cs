@@ -32,4 +32,10 @@ public class EnemySpawner : MonoBehaviour
             Instantiate(enemyToSpawn, new Vector3(7, 0, 0), Quaternion.identity);
         }
     }
+
+    void OnEnemyKilled()
+    {
+        enemiesRemaining -= 1;
+        counter.text = enemiesRemaining.ToString();
+    }
 }
