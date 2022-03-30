@@ -7,10 +7,14 @@ public class EnemySpawner : MonoBehaviour
 {
     public int numberToSpawn;
     public float secondsBetweenSpawn;
-    public Text counter;
+    public int maxEnemiesOnStage;
+    
+    private Text counter;
+    // Which enemy to spawn
     public GameObject enemyToSpawn;
 
     private int enemiesRemaining;
+    private int currentEnemies;
     private float timeRemaining;
 
     // Start is called before the first frame update
@@ -19,6 +23,7 @@ public class EnemySpawner : MonoBehaviour
         enemiesRemaining = numberToSpawn;
         timeRemaining = secondsBetweenSpawn;
 
+        counter = GameObject.Find("EnemyCounter").transform.GetChild(0).GetComponent<Text>();
         counter.text = enemiesRemaining.ToString();
     }
 
@@ -29,13 +34,19 @@ public class EnemySpawner : MonoBehaviour
         if (timeRemaining <= 0)
         {
             timeRemaining += secondsBetweenSpawn;
-            Instantiate(enemyToSpawn, new Vector3(7, 0, 0), Quaternion.identity);
+
+            if (currentEnemies < maxEnemiesOnStage)
+            {
+                currentEnemies++;
+                Instantiate(enemyToSpawn, new Vector3(7, 0, 0), Quaternion.identity);
+            }
         }
     }
 
     void OnEnemyKilled()
     {
-        enemiesRemaining -= 1;
+        currentEnemies--;
+        enemiesRemaining--;
         counter.text = enemiesRemaining.ToString();
     }
 }
