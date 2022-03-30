@@ -14,6 +14,7 @@ namespace Platformer.Mechanics
 
         private GameObject player;
         private float timer;
+        private float collisionCooldown = 0f;
 
         internal AnimationController control;
 
@@ -38,6 +39,23 @@ namespace Platformer.Mechanics
             {
                 timer += timeToChangeDirection;
                 ChangeDirection();
+            }
+
+            if (collisionCooldown > 0)
+            {
+                collisionCooldown -= Time.deltaTime;
+            }
+        }
+
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            var player = collision.gameObject.GetComponent<PlayerController>();
+            if (player != null && collisionCooldown <= 0)
+            {
+                // TODO: hurt player
+                control.move.x *= -1;
+                timer = timeToChangeDirection;
+                collisionCooldown = 1;
             }
         }
 
