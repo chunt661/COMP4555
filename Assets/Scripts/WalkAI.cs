@@ -50,9 +50,11 @@ namespace Platformer.Mechanics
         void OnCollisionEnter2D(Collision2D collision)
         {
             var player = collision.gameObject.GetComponent<PlayerController>();
+            var playerHP = collision.gameObject.GetComponent<Health>();
+
             if (player != null && collisionCooldown <= 0)
             {
-                // TODO: hurt player
+                playerHP.Decrement();
                 control.move.x *= -1;
                 timer = timeToChangeDirection;
                 collisionCooldown = 1;

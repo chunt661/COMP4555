@@ -34,19 +34,28 @@ public class EnemySpawner : MonoBehaviour
         if (timeRemaining <= 0)
         {
             timeRemaining += secondsBetweenSpawn;
-            int side = Random.Range(0, 1);
-            float x = 0f;
-            float y = 0f;
-            if (side == 0)
+
+            if (currentEnemies < maxEnemiesOnStage)
             {
-                x = 22f;
-                y = 2.36f;
-            } else
-            {
-                x = -18f;
-                y = 0.1f;
+                int side = Random.Range(0, 1);
+                float x = 0f;
+                float y = 0f;
+
+                if (side == 0)
+                {
+                    x = 22f;
+                    y = 2.36f;
+                }
+                else
+                {
+                    x = -18f;
+                    y = 0.1f;
+                }
+
+                currentEnemies++;
+
+                Instantiate(enemyToSpawn, new Vector3(x, y, 0), Quaternion.identity);
             }
-            Instantiate(enemyToSpawn, new Vector3(x, y, 0), Quaternion.identity);
         }
     }
 
