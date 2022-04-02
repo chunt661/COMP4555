@@ -29,7 +29,19 @@ public class EnemySpawner : MonoBehaviour
         if (timeRemaining <= 0)
         {
             timeRemaining += secondsBetweenSpawn;
-            Instantiate(enemyToSpawn, new Vector3(7, 0, 0), Quaternion.identity);
+            int side = Random.Range(0, 1);
+            float x = 0f;
+            float y = 0f;
+            if (side == 0)
+            {
+                x = 22f;
+                y = 2.36f;
+            } else
+            {
+                x = -18f;
+                y = 0.1f;
+            }
+            Instantiate(enemyToSpawn, new Vector3(x, y, 0), Quaternion.identity);
         }
     }
 
