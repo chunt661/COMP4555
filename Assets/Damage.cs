@@ -23,7 +23,7 @@ public class Damage : MonoBehaviour
         // anything collided.
         if (col.name.Contains("Hitbox"))
         {
-            health =- 2;
+            health = -2;
 
             if (health <= 0)
             {
@@ -33,4 +33,22 @@ public class Damage : MonoBehaviour
             }
         }
     }
+    void OnCollisionEnter2D(Collision2D theCollision)
+    {
+        // Uncomment this line to check for collision
+        //Debug.Log("Hit"+ theCollision.gameObject.name);
+
+        // this line looks for "laser" in the names of 
+        // anything collided.
+        if (theCollision.gameObject.name.Contains("Player"))
+        {
+
+            Destroy(this.gameObject);
+            //spawner.OnEnemyKilled();
+            spawner.SendMessage("OnEnemyKilled");
+
+        }
+    }
 }
+
+

@@ -24,6 +24,8 @@ namespace Platformer.Mechanics
         public GameObject _Object4;
         public GameObject _Object5;
         public GameObject _Object6;
+        public GameObject _Object7;
+        public GameObject _Object8;
 
         /// <summary>
         /// Max horizontal speed of the player.
@@ -64,7 +66,8 @@ namespace Platformer.Mechanics
             if (controlEnabled)
             {
                 move.x = Input.GetAxis("Horizontal");
-
+                _Object7.SetActive(true);
+                _Object8.SetActive(false);
                 if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
                     jumpState = JumpState.PrepareToJump;
                 else if (Input.GetButtonUp("Jump"))
@@ -143,7 +146,25 @@ namespace Platformer.Mechanics
                     break;
             }
         }
+        void OnCollisionEnter2D(Collision2D theCollision)
+        {
+            // Uncomment this line to check for collision
+            //Debug.Log("Hit"+ theCollision.gameObject.name);
 
+            // this line looks for "laser" in the names of 
+            // anything collided.
+            if (theCollision.gameObject.name.Contains("Enemy"))
+            {
+
+                Schedule<PlayerDeath>();
+                _Object7.SetActive(false);
+                _Object8.SetActive(true);
+                controlEnabled = false;
+
+            }
+
+            
+        }
         protected override void ComputeVelocity()
         {
             if (jump && IsGrounded)
