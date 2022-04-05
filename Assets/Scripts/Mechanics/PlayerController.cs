@@ -26,6 +26,7 @@ namespace Platformer.Mechanics
         public GameObject _Object6;
         public GameObject _Object7;
         public GameObject _Object8;
+        public int playerHP; 
 
         /// <summary>
         /// Max horizontal speed of the player.
@@ -60,6 +61,7 @@ namespace Platformer.Mechanics
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
+            playerHP = 5;
         }
 
         protected override void Update()
@@ -160,10 +162,15 @@ namespace Platformer.Mechanics
             {
                 if (!squish)
                 {
+                    playerHP--;
+                }
+                if (playerHP < 1)
+                {
                     Schedule<PlayerDeath>();
                     _Object7.SetActive(false);
                     _Object8.SetActive(true);
                     controlEnabled = false;
+                    playerHP = 5;
                 }
 
             }
