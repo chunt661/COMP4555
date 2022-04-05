@@ -6,6 +6,7 @@ using static Platformer.Core.Simulation;
 using Platformer.Model;
 using Platformer.Core;
 
+
 namespace Platformer.Mechanics
 {
     /// <summary>
@@ -17,6 +18,14 @@ namespace Platformer.Mechanics
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
+        public GameObject _Object;
+        public GameObject _Object2;
+        public GameObject _Object3;
+        public GameObject _Object4;
+        public GameObject _Object5;
+        public GameObject _Object6;
+        public GameObject _Object7;
+        public GameObject _Object8;
 
         /// <summary>
         /// Max horizontal speed of the player.
@@ -33,6 +42,7 @@ namespace Platformer.Mechanics
         /*internal new*/ public AudioSource audioSource;
         public Health health;
         public bool controlEnabled = true;
+      
 
         bool jump;
         Vector2 move;
@@ -56,6 +66,8 @@ namespace Platformer.Mechanics
             if (controlEnabled)
             {
                 move.x = Input.GetAxis("Horizontal");
+                _Object7.SetActive(true);
+                _Object8.SetActive(false);
                 if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
                     jumpState = JumpState.PrepareToJump;
                 else if (Input.GetButtonUp("Jump"))
@@ -68,6 +80,30 @@ namespace Platformer.Mechanics
             {
                 move.x = 0;
             }
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+            {
+                _Object.SetActive(true);
+                _Object2.SetActive(false);
+                
+                _Object4.SetActive(false);
+                _Object5.SetActive(false);
+                maxSpeed = 7;
+            } else if (Input.GetKey(KeyCode.Z)) {
+                _Object.SetActive(false);
+                _Object2.SetActive(false);
+                
+                _Object4.SetActive(true);
+                _Object5.SetActive(true);
+                maxSpeed =0;
+            } else {
+                _Object.SetActive(false);
+                _Object2.SetActive(true);
+                
+                _Object4.SetActive(false);
+                _Object5.SetActive(false);
+
+            }
+                        
             UpdateJumpState();
             base.Update();
         }
@@ -87,21 +123,48 @@ namespace Platformer.Mechanics
                     {
                         Schedule<PlayerJumped>().player = this;
                         jumpState = JumpState.InFlight;
+                        
+
+
                     }
                     break;
                 case JumpState.InFlight:
+                    
+                    
                     if (IsGrounded)
                     {
                         Schedule<PlayerLanded>().player = this;
                         jumpState = JumpState.Landed;
                     }
+                    _Object6.SetActive(false);
+                    _Object3.SetActive(true);
                     break;
                 case JumpState.Landed:
                     jumpState = JumpState.Grounded;
+                    _Object6.SetActive(true);
+                    _Object3.SetActive(false);
                     break;
             }
         }
+        void OnCollisionEnter2D(Collision2D theCollision)
+        {
+            // Uncomment this line to check for collision
+            //Debug.Log("Hit"+ theCollision.gameObject.name);
 
+            // this line looks for "laser" in the names of 
+            // anything collided.
+            if (theCollision.gameObject.name.Contains("Enemy"))
+            {
+
+                Schedule<PlayerDeath>();
+                _Object7.SetActive(false);
+                _Object8.SetActive(true);
+                controlEnabled = false;
+
+            }
+
+            
+        }
         protected override void ComputeVelocity()
         {
             if (jump && IsGrounded)
@@ -117,12 +180,22 @@ namespace Platformer.Mechanics
                     velocity.y = velocity.y * model.jumpDeceleration;
                 }
             }
+            
 
             if (move.x > 0.01f)
-                spriteRenderer.flipX = false;
-            else if (move.x < -0.01f)
-                spriteRenderer.flipX = true;
+            {
+                
+                this.transform.eulerAngles = new Vector3(0, 0, 0);
+                
 
+
+            }
+            else if (move.x < -0.01f)
+            {
+               
+                this.transform.eulerAngles = new Vector3(0, 180, 0);
+                
+            }
             animator.SetBool("grounded", IsGrounded);
             animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
