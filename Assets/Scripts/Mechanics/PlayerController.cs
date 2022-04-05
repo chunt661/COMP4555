@@ -42,6 +42,7 @@ namespace Platformer.Mechanics
         /*internal new*/ public AudioSource audioSource;
         public Health health;
         public bool controlEnabled = true;
+        public bool squish = false;
       
 
         bool jump;
@@ -138,11 +139,13 @@ namespace Platformer.Mechanics
                     }
                     _Object6.SetActive(false);
                     _Object3.SetActive(true);
+                    squish = true;
                     break;
                 case JumpState.Landed:
                     jumpState = JumpState.Grounded;
                     _Object6.SetActive(true);
                     _Object3.SetActive(false);
+                    squish = false;
                     break;
             }
         }
@@ -155,11 +158,13 @@ namespace Platformer.Mechanics
             // anything collided.
             if (theCollision.gameObject.name.Contains("Enemy"))
             {
-
-                Schedule<PlayerDeath>();
-                _Object7.SetActive(false);
-                _Object8.SetActive(true);
-                controlEnabled = false;
+                if (!squish)
+                {
+                    Schedule<PlayerDeath>();
+                    _Object7.SetActive(false);
+                    _Object8.SetActive(true);
+                    controlEnabled = false;
+                }
 
             }
 
