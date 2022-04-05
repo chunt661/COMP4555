@@ -26,6 +26,8 @@ namespace Platformer.Mechanics
         public GameObject _Object6;
         public GameObject _Object7;
         public GameObject _Object8;
+        public GameObject _Object9;
+        public GameObject _Object10;
         public int playerHP; 
 
         /// <summary>
@@ -82,6 +84,7 @@ namespace Platformer.Mechanics
             else
             {
                 move.x = 0;
+                
             }
             if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
             {
@@ -162,7 +165,17 @@ namespace Platformer.Mechanics
             {
                 if (!squish)
                 {
+                    
+                    if (playerHP > 1)
+                    {                     
+                        Instantiate(_Object10, transform.position, transform.rotation);
+                    }
                     playerHP--;
+                    if (playerHP == 1)
+                    {
+                        _Object9.SetActive(false);
+                    }
+                    
                 }
                 if (playerHP < 1)
                 {
@@ -171,6 +184,8 @@ namespace Platformer.Mechanics
                     _Object8.SetActive(true);
                     controlEnabled = false;
                     playerHP = 5;
+                    _Object9.SetActive(true);
+
                 }
 
             }
