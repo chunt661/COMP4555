@@ -16,13 +16,14 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesRemaining;
     private int currentEnemies;
     private float timeRemaining;
+    int side = 1;
 
     // Start is called before the first frame update
     void Start()
     {
         enemiesRemaining = numberToSpawn;
         timeRemaining = secondsBetweenSpawn;
-
+        
         counter = GameObject.Find("EnemyCounter").transform.GetChild(0).GetComponent<Text>();
         counter.text = enemiesRemaining.ToString();
     }
@@ -34,19 +35,24 @@ public class EnemySpawner : MonoBehaviour
         if (timeRemaining <= 0)
         {
             timeRemaining += secondsBetweenSpawn;
-            int side = Random.Range(0, 1);
+            
             float x = 0f;
             float y = 0f;
-            if (side == 0)
+            if (side == 1)
             {
                 x = 22f;
                 y = 2.36f;
-            } else
+                side = 2;
+            } else if (side == 2)
             {
                 x = -18f;
                 y = 0.1f;
+                side = 1;
             }
-            Instantiate(enemyToSpawn, new Vector3(x, y, 0), Quaternion.identity);
+            if (enemiesRemaining > 0)
+            {
+                Instantiate(enemyToSpawn, new Vector3(x, y, 0), Quaternion.identity);
+            }
         }
     }
 
